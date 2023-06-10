@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('font/fontello.eot?56626138');
+    src: url('font/fontello.eot?56626138#iefix') format('embedded-opentype'),
+         url('font/fontello.woff2?56626138') format('woff2'),
+         url('font/fontello.woff?56626138') format('woff'),
+         url('font/fontello.ttf?56626138') format('truetype'),
+         url('font/fontello.svg?56626138#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"]:before, [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+  
+    display: inline-block;
+    text-decoration: inherit;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-github-circled:before { content: '\f09b'; } /* '' */
+  .icon-github:before { content: '\f113'; } /* '' */
+  .icon-gittip:before { content: '\f184'; } /* '' */
+  .icon-git-squared:before { content: '\f1d2'; } /* '' */
+  .icon-git:before { content: '\f1d3'; } /* '' */
+  .icon-github-squared:before { content: '\f300'; } /* '' */
+  
+  i{
+    font-size: 50px;
+    color: grey;
+  }
+  i:hover{
+    color: #000;
+  }

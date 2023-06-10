@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Unispace';
+    src: local('Unispace-Italic'),
+        url('font/Unispace-Italic.woff2') format('woff2'),
+        url('font/Unispace-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unispace';
+    src: local('Unispace-Regular'),
+        url('font/Unispace-Regular.woff2') format('woff2'),
+        url('font/Unispace-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Unispace';
+    src: local('Unispace-Bold'),
+        url('font/Unispace-Bold.woff2') format('woff2'),
+        url('font/Unispace-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+div {
+    font-family: 'Unispace';
+    font-weight: bold;
+    font-size: 50px;
+}

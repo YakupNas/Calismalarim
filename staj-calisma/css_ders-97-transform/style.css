@@ -1,0 +1,59 @@
+html {
+    font-family: Arial, Helvetica, sans-serif
+}
+.boxi {
+    width: 200px;
+    height: 200px;
+    background-color: lightblue;
+    transition:all 1.5s;
+}
+.cevir::before {
+    content: attr(data-cevir);
+}
+.checkbox:checked + .cevir::before {
+    content: attr(data-gericevir);
+}
+.checkbox:checked + label + .boxi {
+    transform: rotate(360deg);
+}
+
+.box{
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    perspective: 800px;
+}
+.box .on_yuz, .box .arka_yuz{
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    transition:all 1s;
+    backface-visibility: hidden;
+}
+.box .on_yuz{
+    background-color: lightblue;
+    transform: rotateX(0deg);
+}
+.box .arka_yuz{
+    background-color: lightgreen;
+    transform: rotateX(180deg);
+}
+.box:hover .on_yuz{
+    transform: rotateX(180deg);
+}
+.box:hover .arka_yuz{
+    transform: rotateX(360deg);
+}
+
+.skew-box{
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    transition: all 1s;
+}
+.checkbox:checked + label +.skew-box{
+    transform: skew(89.99deg, 10deg);
+}
