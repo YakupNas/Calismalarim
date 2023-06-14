@@ -77,19 +77,16 @@ iframe{
     border-top: #ccc 1px solid;
 }
 
-.derscss{
+.menu ul li input{
     position: relative;
     display: none;
 }
 
-.menu-css{
+.menu ul li ul{
     display: none;
 }
 
-.derscss:checked + .menu-css{
+.menu ul li input:checked + ul{
     display: block;
 }
 
-.dersjs{
-    display: none;
-}
