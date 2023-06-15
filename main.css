@@ -63,11 +63,11 @@ iframe{
     height: 100%;
     cursor: pointer;
     display: inline-block;
-    padding: 10px 0px 10px 10px;
+    padding: 10px;
 }
 
 .menu ul li ul li{
-    padding: 10px 0 10px 30px;
+    padding: 10px 10px 10px 30px;
 }
 
 .menu ul li ul li:last-child{
