@@ -1,1 +1,7 @@
 index-upgrade/
+tailwindcss/node_modules/
+tailwindcss/package-lock.json
+tailwindcss/package.json
+tailwindcss/tailwind.config.js
+tailwindcss/tailwind.css
+30-gun-js/

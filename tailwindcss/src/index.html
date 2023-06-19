@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="tr" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Prototurk.com Demo</title>
+</head>
+<body class="bg-white h-full flex flex-col dark:bg-gray-900 dark:text-white">
+   <div class="h-15 border-b border-gray-200 dark:border-gray-700 w-full flex justify-between items-center px-3 lg:px-5 flex-shrink-0">
+
+    <button onclick="sidebar()" class="text-gray-800 dark:text-white lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="fill-current"><path d="M120-240v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg>
+    </button>
+
+    <a href="#" class="text-2xl font-semibold inline-flex items-center">
+            ./prototurk
+            <span class="text-sm text-gray-400 ml-1.5 hidden lg:inline-block">v2.5.2</span>
+    </a>
+    <form action="" class="w-[600px] hidden lg:block">
+        <input type="text" placeholder="Ara" class="bg-slate-100 dark:bg-gray-800 px-4 h-10 border border-gray-100 dark:border-gray-800 dark:focus:border-gray-700 rounded-md w-full outline-none placeholder-gray-500 dark:placeholder-gray-300 focus:bg-white font-medium">
+    </form>
+    <a href="#" onclick="modal('login-modal')" class="hidden bg-slate-700 text-white h-10 px-5 rounded-md font-medium items-center">Giriş yap</a>
+
+    <div class="group relative">
+        <button class="flex items-center  rounded h-10 text-sm">
+            <img src="https://yt3.ggpht.com/te3nWdrr0F9HRuWRczBteE1B-ukZP0UgXGCzw0A9JZ5wc8AdfbbRszPvwrWomwTAILnJlWdkNxM=s108-c-k-c0x00ffffff-no-rj" width="30px" height="30px" class="rounded-full">
+            <span class="hidden lg:inline-block ml-2">Sett</span>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" class="fill-current "><path d="M480-360 280-559h400L480-360Z"/></svg>
+        </button>
+        <div class="opacity-0 invisible absolute top-full right-0 w-44 rounded p-1 space-y-1 bg-gray-200 dark:bg-gray-800 group-focus-within:opacity-100 group-focus-within:visible group-focus-within:mt-1 transition-all z-10">
+            <a href="#" class="text-sm flex h-7 items-center px-3 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">Profil</a>
+            <a href="#" class="text-sm flex h-7 items-center px-3 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">Profil Düzenle</a>
+            <a href="#" class="text-sm flex h-7 items-center px-3 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">Takipçiler</a>
+            <a href="#" class="text-sm flex h-7 items-center px-3 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">Sorular</a>
+            <a href="#" class="text-sm flex h-7 items-center px-3 rounded transition-colors hover:bg-gray-100 dark:hover:bg-gray-700">Cevaplar</a>
+            <a href="#" class="text-sm text-red-500 flex h-7 items-center px-3 rounded transition-colors hover:bg-red-200 dark:hover:bg-red-500 dark:hover:text-red-100">Çıkış Yap</a>
+            <a href="#" onclick="modal('login-modal')" class="flex bg-slate-700 text-white h-10 px-5 rounded-md font-medium items-center">Giriş yap</a>
+        </div>
+    </div>
+
+
+   </div>
+   <main class="calc-h-full-15 flex">
+        <aside class="side-bar">
+            <ul>
+                <li><a href="#" class="nav-link">Anasayfa</a></li>
+                <li><a href="#" class="nav-link">Akış</a></li>
+                <li><a href="#" class="nav-link">Keşfet</a></li>
+                <li><a href="#" class="nav-link">Makaleler</a></li>
+                <li><a href="#" class="nav-link">Soru Cevap</a></li>
+                <li><a href="#" class="nav-link">Ders İstekleri</a></li>
+            </ul>
+            <div class="h-[1px] my-4"></div>
+            <ul>
+                <li><a href="#" class="nav-link">HTML</a></li>
+                <li><a href="#" class="nav-link">CSS</a></li>
+                <li><a href="#" class="nav-link">JavaScript</a></li>
+                <li><a href="#" class="nav-link">PHP</a></li>
+                <li><a href="#" class="nav-link">MySQL</a></li>
+                <li><a href="#" class="nav-link">Laravel</a></li>
+                <li><a href="#" class="nav-link">Python</a></li>
+                <li><a href="#" class="nav-link">Git</a></li>
+            </ul>
+            <div class="mt-auto inline-flex flex-col mx-0.5">
+                <a href="#" class="bg-gray-700 text-white h-10 flex items-center justify-center rounded-md mt-2">Uygulamayı yükle</a>
+                <a href="#" class="bg-zinc-900 dark:bg-white text-white dark:text-gray-800 font-semibold h-10 flex items-center rounded-md mt-2 px-4" onclick="darkMode()">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24" class="fill-current mr-2"><path d="m480-283 55-55h94v-96l50-50-50-49v-95h-95l-54-54-54 54h-92v95l-50 50 50 50v95h92l54 55Zm0-80v-238q49 0 83.5 34.708Q598-531.583 598-482t-34.417 84.292Q529.167-363 480-363ZM140-160q-24 0-42-18t-18-42v-520q0-24 18-42t42-18h680q24 0 42 18t18 42v520q0 24-18 42t-42 18H140Zm0-60h680v-520H140v520Zm0 0v-520 520Z"/></svg>
+                    <span class="hidden dark:inline">Açık Mod</span>
+                    <span class="inline dark:hidden">Koyu Mod</span>
+                </a>
+            </div>
+        </aside>
+
+        <section class="flex-auto py-6 px-3 lg:px-10 overflow-auto">
+            <div class="max-w-screen-xl mx-auto">
+                <h2 class="text-3xl font-bold mb-3 leading-relaxed">Kendine değer kat!</h2>
+                <p class="mb-3.5">
+                    İyi bir kariyer için, doğru bir başlangıç gerekir. Prototürk'de bir çok dil ve teknolojiye ait derslerle doğru bir başlangıç yapmaya hazırsın!
+                </p>
+
+                <div class="flex lg:grid overflow-x-auto mt-5 grid-cols-10 gap-3 lg:gap-7">
+                    <div class="col-span-5  lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 h-24 border border-orange-600 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-1.5 -right-1.5 w-[90px] h-[90px] bg-orange-600 opacity-10 rounded-full -z-10"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="50px" height="50px" class="fill-current text-orange-600"><path d="M 45.273438 2.324219 C 45.085938 2.117188 44.816406 2 44.535156 2 L 5.464844 2 C 5.183594 2 4.914063 2.117188 4.726563 2.324219 C 4.535156 2.53125 4.441406 2.808594 4.46875 3.089844 L 7.988281 42.515625 C 8.023438 42.929688 8.3125 43.273438 8.710938 43.390625 L 24.722656 47.960938 C 24.808594 47.988281 24.902344 48 24.996094 48 C 25.089844 48 25.179688 47.988281 25.269531 47.960938 L 41.292969 43.390625 C 41.691406 43.273438 41.976563 42.929688 42.015625 42.515625 L 45.53125 3.089844 C 45.558594 2.808594 45.464844 2.53125 45.273438 2.324219 Z M 36.847656 15.917969 L 18.035156 15.917969 L 18.484375 21.007813 L 36.394531 21.007813 L 35.050781 36.050781 L 24.992188 39.089844 L 24.894531 39.058594 L 14.953125 36.046875 L 14.410156 29.917969 L 19.28125 29.917969 L 19.492188 32.296875 L 25.050781 33.460938 L 30.507813 32.296875 L 31.089844 25.859375 L 14.046875 25.859375 L 12.722656 11.054688 L 37.28125 11.054688 Z"/></svg>
+                            </span>
+                            <span class="m h-9 px-5 bg-orange-600 text-white rounded mt-3 inline-flex items-center">HTML</span>
+                        </a>
+                    </div>
+                    <div class="col-span-5  lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 h-24 border border-blue-500 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-1.5 -right-1.5 w-[90px] h-[90px] bg-blue-500 opacity-10 rounded-full -z-10"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="60px" height="60px" class="fill-current text-blue-600"><path fill-rule="evenodd" d="M 42 6 L 39 40 L 25 44 L 11 40 L 8 6 Z M 16.800781 28 L 20.800781 28 L 20.898438 30.5 L 25 31.898438 L 29.101563 30.5 L 29.398438 26 L 20.601563 26 L 20.398438 22 L 29.601563 22 L 29.898438 18 L 16.101563 18 L 15.800781 14 L 34.101563 14 L 33.601563 22 L 32.898438 33.5 L 25 36.101563 L 17.101563 33.5 Z"/></svg>
+                            </span>
+                            <span class="m h-9 px-5 bg-blue-500 text-white rounded mt-3 inline-flex items-center">CSS</span>
+                        </a>
+                    </div>
+                    <div class="col-span-5  lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 h-24 border border-amber-400 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-1.5 -right-1.5 w-[90px] h-[90px] bg-amber-400 opacity-10 rounded-full -z-10"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="60px" height="60px" baseProfile="basic"><path fill="#f7df1e" d="M6,42V6h36v36H6z"/><path fill="#000001" d="M29.538,32.947c0.692,1.124,1.444,2.201,3.037,2.201c1.338,0,2.04-0.665,2.04-1.585 c0-1.101-0.726-1.492-2.198-2.133l-0.807-0.344c-2.329-0.988-3.878-2.226-3.878-4.841c0-2.41,1.845-4.244,4.728-4.244 c2.053,0,3.528,0.711,4.592,2.573l-2.514,1.607c-0.553-0.988-1.151-1.377-2.078-1.377c-0.946,0-1.545,0.597-1.545,1.377 c0,0.964,0.6,1.354,1.985,1.951l0.807,0.344C36.452,29.645,38,30.839,38,33.523C38,36.415,35.716,38,32.65,38 c-2.999,0-4.702-1.505-5.65-3.368L29.538,32.947z M17.952,33.029c0.506,0.906,1.275,1.603,2.381,1.603 c1.058,0,1.667-0.418,1.667-2.043V22h3.333v11.101c0,3.367-1.953,4.899-4.805,4.899c-2.577,0-4.437-1.746-5.195-3.368 L17.952,33.029z"/></svg>
+                            </span>
+                            <span class="m h-9 px-5 bg-yellow-400  rounded mt-3 inline-flex items-center">Javascript</span>
+                        </a>
+                    </div>
+                    <div class="col-span-5  lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 h-24 border border-violet-500 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-1.5 -right-1.5 w-[90px] h-[90px] bg-violet-500 opacity-10 rounded-full -z-10"></span>
+                                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 472 512" height="50px" class="fill-current text-violet-600"><path d="M0.3801592,40.7015572l40.1116867,359.8253479c2.0965805,13.538208,9.2626991,23.6380615,21.82547,30.0778503L220.9944,508.4745178c10.4808197,4.5377502,20.4982758,4.8607483,31.8534088,0l158.0872192-77.8638611c12.971405-6.4886475,20.6457214-20.0558472,20.0499573-34.2069702L469.922821,39.5218086C472.8915405,22.5614071,459.2008667,0.427229,433.9402161,0H36.3626976C20.6944523,0.0833356-3.3098602,11.7690163,0.3801592,40.7015572z M61.8416519,299.2036438l26.135704-132.3095551h60.4388733c26.1356964,1.6334839,39.2032776,14.7015228,39.2032776,37.5698853c0,39.2032623-31.0358276,62.0728302-58.8049011,60.4388885H99.4121552l-6.5340805,34.3031311L61.8416519,299.2036438z M114.1130676,191.3946686h21.2350006c11.4341888,0,19.6016388,4.9004059,19.6016388,14.7015076c-1.6334991,27.7690887-14.7015228,32.6697845-29.4024582,34.3031616H105.94561L114.1130676,191.3946686z M185.8175049,264.9022522l26.1356964-132.3095398h31.0358124l-6.5340881,34.3031464h29.4024658c26.1357117,1.6334991,35.9365234,14.7015228,32.6697693,31.0358124l-11.4341736,66.9747009h-32.6697845l11.4341888-60.4388428c1.6334839-8.16745,1.6334839-13.0675659-9.8008118-13.0675659h-24.5023499l-14.7015228,73.5046387L185.8175049,264.9022522z M289.7267456,297.3526917l25.9723511-131.4826355h60.0611267c25.9723511,1.6232758,38.958252,14.6096344,38.958252,37.335083c0,38.9582367-30.8418579,61.684845-58.4373779,60.0611267H327.062439l-6.4932556,34.0887756L289.7267456,297.3526917z M333.5550537,238.9153137l8.116394-48.6977997h21.1022949c11.3627319,0,19.479126,4.8697815,19.479126,14.6096191c-1.623291,27.5955353-14.6096497,32.4655914-29.218689,34.0887756L333.5550537,238.9153137z"/></svg>
+                            </span>
+                            <span class="m h-9 px-5 bg-violet-500 text-white rounded mt-3 inline-flex items-center">PHP</span>
+                        </a>
+                    </div>
+                    <div class="col-span-5  lg:col-span-2">
+                        <a href="#" class="slider-item">
+                            <span class="w-24 h-24 border border-teal-700 rounded-full grid place-items-center relative">
+                                <span class="absolute -top-1.5 -right-1.5 w-[90px] h-[90px] bg-teal-700 opacity-10 rounded-full -z-10"></span>
+                                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" width="50px" height="50px" class="fill-current text-teal-600"><path d="M 3.125 1 C 2.219 1 1.5030625 1.4805 1.1640625 2.3125 C 1.0570625 2.5695 1.0029531 2.8420469 1.0019531 3.1230469 C 1.0009531 4.0540469 1.6009375 4.8097188 1.9609375 5.2617188 C 2.0239375 5.3407187 2.080625 5.4110938 2.140625 5.4960938 L 2.3027344 5.7109375 C 2.4637344 5.9219375 2.6470781 6.16125 2.7050781 6.28125 C 2.7240781 6.33625 2.7492031 6.4326875 2.7832031 6.5546875 C 2.9402031 7.1196875 3.2332187 8.16975 3.6992188 8.96875 C 3.8872187 9.29075 4.1517969 9.6954687 4.3417969 9.9804688 C 4.2147969 10.616469 4 11.788 4 12.5 C 4 13.75 4.2592188 14.753875 4.8242188 15.671875 C 5.0332187 15.999875 5.671 17 6.75 17 C 7.133 17 7.7694062 16.850391 7.9414062 15.900391 C 8.7064063 16.887391 10 18.125 12 19 C 12 19 8.2507969 14.625438 7.5917969 11.898438 C 7.5917969 11.898437 6.874625 12.625375 6.265625 14.109375 C 6.083625 13.651375 6 13.135 6 12.5 C 6 11.873 6.2758125 10.471375 6.3828125 9.984375 L 6.4765625 9.5605469 L 6.2304688 9.203125 C 6.2264687 9.196125 5.7227344 8.4688906 5.4277344 7.9628906 C 5.0917344 7.3868906 4.8439375 6.4955781 4.7109375 6.0175781 C 4.6459375 5.7845781 4.594875 5.6159531 4.546875 5.5019531 C 4.371875 5.1229531 4.115625 4.7900937 3.890625 4.4960938 L 3.765625 4.3300781 C 3.702625 4.2390781 3.6193906 4.133625 3.5253906 4.015625 C 3.3423906 3.785625 3.0017188 3.3570312 3.0117188 3.0820312 L 3.1230469 3.0039062 L 3.125 3 C 3.92 3 4.9440781 3.5643437 5.3300781 3.7773438 C 5.4560781 3.8463438 5.5486563 3.8940156 5.5976562 3.9160156 L 5.7714844 3.9921875 L 6.1132812 4.0039062 C 6.5602813 4.0139062 7.9189063 4.0456875 8.8789062 4.4296875 C 10.629906 5.1296875 11.598031 5.830375 12.582031 7.109375 C 14.906031 10.131375 15.763484 14.044984 15.771484 14.083984 L 15.896484 14.648438 L 16.443359 14.826172 C 16.462359 14.833172 17.992922 15.344641 19.419922 16.681641 C 17.624922 17.125641 17 18 17 18 C 17 18 17.476 18.928 19.75 20.375 C 21.125 21.25 21.875 21.875 23 23 C 23 23 21.875688 20.499813 20.304688 18.507812 C 21.500687 18.124813 22.970703 17.925781 22.970703 17.925781 L 22.060547 16.664062 C 20.562547 14.587063 18.553656 13.538859 17.597656 13.130859 C 17.265656 11.864859 16.262969 8.614625 14.167969 5.890625 C 12.968969 4.331625 11.693094 3.3993125 9.6210938 2.5703125 C 8.3940937 2.0803125 6.9187188 2.0218594 6.2617188 2.0058594 C 5.6867187 1.6898594 4.409 1 3.125 1 z M 7.1875 5 C 7.1875 5 6.75 5 6.25 5.125 L 7.625 6.9980469 C 8 6.5000469 8 5.9179688 8 5.9179688 C 8 5.9179688 7.7505 5.25 7.1875 5 z"/></svg>
+                            </span>
+                            <span class="m h-9 px-5 bg-teal-600 text-white rounded mt-3 inline-flex items-center">MySQL</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-r from-[#da0098] to-[#0066ff] mt-10 px-8 py-4 rounded flex flex-col lg:flex-row items-baseline lg:items-center  gap-x-8 -z-20">
+                    <div class="relative pl-0 lg:pl-2 mb-4 lg:mb-0">
+                        <span class="absolute -top-2 -right-5 w-[60px] h-[60px] bg-white opacity-10 rounded-full z-[4]"></span>
+                        <svg width="40px" height="40px" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" class="fill-current z-[5] text-white"><path d="M127.999746,23.06353 C162.177385,23.06353 166.225393,23.1936027 179.722476,23.8094161 C192.20235,24.3789926 198.979853,26.4642218 203.490736,28.2166477 C209.464938,30.5386501 213.729395,33.3128586 218.208268,37.7917319 C222.687141,42.2706052 225.46135,46.5350617 227.782844,52.5092638 C229.535778,57.0201472 231.621007,63.7976504 232.190584,76.277016 C232.806397,89.7746075 232.93647,93.8226147 232.93647,128.000254 C232.93647,162.177893 232.806397,166.225901 232.190584,179.722984 C231.621007,192.202858 229.535778,198.980361 227.782844,203.491244 C225.46135,209.465446 222.687141,213.729903 218.208268,218.208776 C213.729395,222.687649 209.464938,225.461858 203.490736,227.783352 C198.979853,229.536286 192.20235,231.621516 179.722476,232.191092 C166.227425,232.806905 162.179418,232.936978 127.999746,232.936978 C93.8200742,232.936978 89.772067,232.806905 76.277016,232.191092 C63.7971424,231.621516 57.0196391,229.536286 52.5092638,227.783352 C46.5345536,225.461858 42.2700971,222.687649 37.7912238,218.208776 C33.3123505,213.729903 30.538142,209.465446 28.2166477,203.491244 C26.4637138,198.980361 24.3784845,192.202858 23.808908,179.723492 C23.1930946,166.225901 23.0630219,162.177893 23.0630219,128.000254 C23.0630219,93.8226147 23.1930946,89.7746075 23.808908,76.2775241 C24.3784845,63.7976504 26.4637138,57.0201472 28.2166477,52.5092638 C30.538142,46.5350617 33.3123505,42.2706052 37.7912238,37.7917319 C42.2700971,33.3128586 46.5345536,30.5386501 52.5092638,28.2166477 C57.0196391,26.4642218 63.7971424,24.3789926 76.2765079,23.8094161 C89.7740994,23.1936027 93.8221066,23.06353 127.999746,23.06353 M127.999746,0 C93.2367791,0 88.8783247,0.147348072 75.2257637,0.770274749 C61.601148,1.39218523 52.2968794,3.55566141 44.1546281,6.72008828 C35.7374966,9.99121548 28.5992446,14.3679613 21.4833489,21.483857 C14.3674532,28.5997527 9.99070739,35.7380046 6.71958019,44.1551362 C3.55515331,52.2973875 1.39167714,61.6016561 0.769766653,75.2262718 C0.146839975,88.8783247 0,93.2372872 0,128.000254 C0,162.763221 0.146839975,167.122183 0.769766653,180.774236 C1.39167714,194.398852 3.55515331,203.703121 6.71958019,211.845372 C9.99070739,220.261995 14.3674532,227.400755 21.4833489,234.516651 C28.5992446,241.632547 35.7374966,246.009293 44.1546281,249.28042 C52.2968794,252.444847 61.601148,254.608323 75.2257637,255.230233 C88.8783247,255.85316 93.2367791,256 127.999746,256 C162.762713,256 167.121675,255.85316 180.773728,255.230233 C194.398344,254.608323 203.702613,252.444847 211.844864,249.28042 C220.261995,246.009293 227.400247,241.632547 234.516143,234.516651 C241.632039,227.400755 246.008785,220.262503 249.279912,211.845372 C252.444339,203.703121 254.607815,194.398852 255.229725,180.774236 C255.852652,167.122183 256,162.763221 256,128.000254 C256,93.2372872 255.852652,88.8783247 255.229725,75.2262718 C254.607815,61.6016561 252.444339,52.2973875 249.279912,44.1551362 C246.008785,35.7380046 241.632039,28.5997527 234.516143,21.483857 C227.400247,14.3679613 220.261995,9.99121548 211.844864,6.72008828 C203.702613,3.55566141 194.398344,1.39218523 180.773728,0.770274749 C167.121675,0.147348072 162.762713,0 127.999746,0 Z M127.999746,62.2703115 C91.698262,62.2703115 62.2698034,91.69877 62.2698034,128.000254 C62.2698034,164.301738 91.698262,193.730197 127.999746,193.730197 C164.30123,193.730197 193.729689,164.301738 193.729689,128.000254 C193.729689,91.69877 164.30123,62.2703115 127.999746,62.2703115 Z M127.999746,170.667175 C104.435741,170.667175 85.3328252,151.564259 85.3328252,128.000254 C85.3328252,104.436249 104.435741,85.3333333 127.999746,85.3333333 C151.563751,85.3333333 170.666667,104.436249 170.666667,128.000254 C170.666667,151.564259 151.563751,170.667175 127.999746,170.667175 Z M211.686338,59.6734287 C211.686338,68.1566129 204.809755,75.0337031 196.326571,75.0337031 C187.843387,75.0337031 180.966297,68.1566129 180.966297,59.6734287 C180.966297,51.1902445 187.843387,44.3136624 196.326571,44.3136624 C204.809755,44.3136624 211.686338,51.1902445 211.686338,59.6734287 Z"></path></svg>
+                    </div>
+
+                    <div>
+                        <h6 class="text-white text-xl">Instagram'da <strong class="font-semibold">@prototurk.official</strong> hesabını takip etmeyi unutma!</h6>
+                        <p class="text-[#ffffffb3]">Kodlamayla ilgili ipucu ve kolay kullanımları paylaştığımız instagram hesabını takip etmeyi unutmayın.</p>
+                        <a href="#" class="bg-white dark:bg-gray-800 h-10 px-5 inline-flex items-center rounded mt-5">Takip et</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+   </main>
+
+   <div class="modal" id="login-modal">
+    <div class="modal-content">
+        <h3 class="text-2xl mb-4">Giriş Yap</h3>
+        <button onclick="modal('login-modal')" class="bg-gray-700 px-6 inline-flex items-center rounded h-10 text-white">Kapat</button>
+    </div>
+   </div>
+
+   <script>
+    if(localStorage.getItem('dark')) {
+        document.documentElement.classList.add('dark');
+    }
+    function darkMode() {
+        document.documentElement.classList.toggle('dark');
+        if(document.documentElement.classList.contains('dark')) {
+            localStorage.setItem('dark', 'true');
+        }
+        else {
+            localStorage.removeItem('dark');
+        }
+    }
+
+    function modal(id) {
+        document.getElementById(id).classList.toggle('active');
+    }
+
+    function sidebar() {
+        document.querySelector('.side-bar').classList.toggle('active');
+    }
+
+   </script>
+</body>
+</html>
